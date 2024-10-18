@@ -7,3 +7,7 @@ a:hover {
   font-size: 1.05em;
   text-decoration: underline;
 }
+
+i:hover {
+  cursor: pointer;
+}

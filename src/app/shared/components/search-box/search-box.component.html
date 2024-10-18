@@ -1,7 +1,14 @@
-<input
-  type="text"
-  [placeholder]="placeholder"
-  class="form-control"
-  (keyup.enter)="emitValue( textInput.value )"
-  #textInput
->
+<div class="input-group">
+  <input
+    type="text"
+    [placeholder]="placeholder"
+    class="form-control"
+    (keyup.enter)="emitValue(textInput.value)"
+    #textInput
+  />
+  <span class="input-group-text" (click)="emitValue(textInput.value)">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </span>
+</div>
+
+
