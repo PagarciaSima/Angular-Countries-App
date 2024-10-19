@@ -24,7 +24,9 @@
         <td> {{ country.capital }}</td>
         <td> {{ country.population | number }}</td>
         <td>
-          <a href="#">Ver más</a>
+          <a [routerLink]="['/countries/by', country.cca3]">
+            <i class="fa-solid fa-circle-info me-2"></i><span>Info</span>
+          </a>
         </td>
       </tr>
     </tbody>
