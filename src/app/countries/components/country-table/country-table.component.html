@@ -15,8 +15,8 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let country of countries; let i = index">
-        <td>{{ i + 1 }}</td>
+      <tr *ngFor="let country of paginatedCountries; let i = index">
+        <td>{{ (currentPage - 1) * countriesPerPage + (i + 1) }}</td>
         <td>
           <img [src]="country.flags.svg" [alt]="country.name.common" />
         </td>
@@ -31,4 +31,26 @@
       </tr>
     </tbody>
   </table>
+
+  <!-- Controles de paginación -->
+  <nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+      <li class="page-item" [class.disabled]="currentPage === 1">
+        <a class="page-link" (click)="changePage(currentPage - 1)" aria-label="Anterior">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+
+      <li class="page-item" *ngFor="let page of [].constructor(totalPages); let i = index"
+          [class.active]="currentPage === i + 1">
+        <a class="page-link" (click)="changePage(i + 1)">{{ i + 1 }}</a>
+      </li>
+
+      <li class="page-item" [class.disabled]="currentPage === totalPages">
+        <a class="page-link" (click)="changePage(currentPage + 1)" aria-label="Siguiente">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
 </ng-template>
