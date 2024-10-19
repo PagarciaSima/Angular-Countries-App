@@ -1,9 +1,10 @@
 <div class="input-group">
+  <!-- (keyup.enter)="emitValue(textInput.value)" -->
   <input
     type="text"
     [placeholder]="placeholder"
+    (keyup)="onKeyPress(textInput.value)"
     class="form-control"
-    (keyup.enter)="emitValue(textInput.value)"
     #textInput
   />
   <span class="input-group-text" (click)="emitValue(textInput.value)">
