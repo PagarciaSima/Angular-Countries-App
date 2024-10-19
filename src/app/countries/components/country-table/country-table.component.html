@@ -33,22 +33,39 @@
   </table>
 
   <!-- Controles de paginación -->
-  <nav aria-label="Page navigation">
+  <nav aria-label="Page navigation" *ngIf="totalPages > 1">
     <ul class="pagination justify-content-center">
+       <!-- Botón Primero -->
+      <li class="page-item" [class.disabled]="currentPage === 1">
+        <a class="page-link" (click)="changePage(1)" aria-label="Primero">
+          <span aria-hidden="true">Primero</span>
+        </a>
+      </li>
+
+      <!-- Botón Anterior -->
       <li class="page-item" [class.disabled]="currentPage === 1">
         <a class="page-link" (click)="changePage(currentPage - 1)" aria-label="Anterior">
           <span aria-hidden="true">&laquo;</span>
         </a>
       </li>
 
+      <!-- Botones de las páginas -->
       <li class="page-item" *ngFor="let page of [].constructor(totalPages); let i = index"
           [class.active]="currentPage === i + 1">
         <a class="page-link" (click)="changePage(i + 1)">{{ i + 1 }}</a>
       </li>
 
+      <!-- Botón Siguiente -->
       <li class="page-item" [class.disabled]="currentPage === totalPages">
         <a class="page-link" (click)="changePage(currentPage + 1)" aria-label="Siguiente">
           <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+
+      <!-- Botón Último -->
+      <li class="page-item" [class.disabled]="currentPage === totalPages">
+        <a class="page-link" (click)="changePage(totalPages)" aria-label="Último">
+          <span aria-hidden="true">Último</span>
         </a>
       </li>
     </ul>
