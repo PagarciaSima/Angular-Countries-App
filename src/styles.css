@@ -8,6 +8,6 @@ a:hover {
   text-decoration: underline;
 }
 
-i:hover, .page-link {
+i:hover, .page-link, .list-group-item {
   cursor: pointer;
 }

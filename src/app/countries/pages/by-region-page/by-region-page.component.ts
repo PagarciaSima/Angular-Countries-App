@@ -3,6 +3,8 @@ import { Country } from '../../interfaces/country';
 import { CountryService } from '../../services/countries.service';
 import { Subscription } from 'rxjs';
 
+type Region = 'Africa'| 'Americas'| 'Asia'| 'Europe'| 'Oceania';
+
 @Component({
   selector: 'app-by-region-page',
   templateUrl: './by-region-page.component.html',
@@ -12,6 +14,8 @@ export class ByRegionPageComponent implements OnDestroy{
 
   public countries: Country [] = [];
   private countrySubscription?: Subscription;
+  public regions: Region [] = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
+  public selectedRegion?: Region;
 
   constructor(
     private countryService: CountryService
@@ -22,8 +26,9 @@ export class ByRegionPageComponent implements OnDestroy{
     this.countrySubscription?.unsubscribe();
   }
 
-  searchByRegion(term: string): void {
-    this.countrySubscription = this.countryService.searchRegion(term)
+  searchByRegion(region: Region): void {
+    this.selectedRegion = region;
+    this.countrySubscription = this.countryService.searchRegion(region)
       .subscribe(countries => {
         this.countries = countries;
       });
