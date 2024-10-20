@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CountryService } from '../../services/countries.service';
-import { switchMap } from 'rxjs';
+import { Subscription, switchMap } from 'rxjs';
 import { Country } from '../../interfaces/country';
 
 @Component({
@@ -9,9 +9,10 @@ import { Country } from '../../interfaces/country';
   templateUrl: './country-page.component.html',
   styleUrls: ['./country-page.component.css']
 })
-export class CountryPageComponent implements OnInit {
+export class CountryPageComponent implements OnInit, OnDestroy {
 
   public country?: Country;
+  private countrySubscription?: Subscription;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -22,7 +23,7 @@ export class CountryPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.activatedRoute.params
+    this.countrySubscription = this.activatedRoute.params
       .pipe (
         switchMap( ({id}) => this.countryService.searchCountryByAlphaCode(id))
       )
@@ -32,4 +33,9 @@ export class CountryPageComponent implements OnInit {
         return this.country = country;
       });
   }
+
+  ngOnDestroy(): void {
+    this.countrySubscription?.unsubscribe();
+  }
+
 }
