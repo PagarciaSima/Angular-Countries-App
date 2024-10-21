@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CountryService } from '../../services/countries.service';
 import { Country } from '../../interfaces/country';
 import { Subscription } from 'rxjs';
@@ -8,16 +8,22 @@ import { Subscription } from 'rxjs';
   templateUrl: './by-capital-page.component.html',
   styleUrls: ['./by-capital-page.component.css']
 })
-export class ByCapitalPageComponent implements OnDestroy{
+export class ByCapitalPageComponent implements OnInit, OnDestroy{
 
-  public countries: Country [] = [];
-  public isLoading: boolean = false;
   private countrySubscription? : Subscription;
+  public countries: Country [] = [];
+  public initialValue: string = '';
+  public isLoading: boolean = false;
 
   constructor(
     private countryService: CountryService
   ) {
 
+  }
+
+  ngOnInit(): void {
+    this.countries = this.countryService.cacheStore.byCapital.countries;
+    this.initialValue = this.countryService.cacheStore.byCapital.term;
   }
 
   ngOnDestroy(): void {
