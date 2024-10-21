@@ -1,61 +1,61 @@
-# 馃寧 Aplicaci贸n de B煤squeda de Pa铆ses en Angular 15.2.0
+# ?? Aplicación de Búsqueda de Países en Angular 15.2.0
 
-## 馃専 Caracter铆sticas
+## ?? Características
 
-Esta es una aplicaci贸n desarrollada en Angular que permite buscar informaci贸n detallada de pa铆ses a trav茅s de la API p煤blica de [Rest Countries](https://restcountries.com/).  
-Los usuarios pueden **buscar por nombre**, **buscar por capital**, **filtrar por regi贸n**, y **navegar hacia p谩ginas individuales** con informaci贸n detallada de cada pa铆s.  
-Adem谩s, se ha implementado **paginaci贸n** para mejorar la navegaci贸n y **FontAwesome** para iconos interactivos.
+Esta es una aplicación desarrollada en Angular que permite buscar información detallada de países a través de la API pública de [Rest Countries](https://restcountries.com/).  
+Los usuarios pueden **buscar por nombre**, **buscar por capital**, **filtrar por región**, y **navegar hacia páginas individuales** con información detallada de cada país.  
+Además, se ha implementado **paginación** para mejorar la navegación y **FontAwesome** para iconos interactivos.
 
 ---
 
-### 馃殌 Tecnolog铆as utilizadas
+### ?? Tecnologías utilizadas
 - **Angular 15.2.0**
-- **Rest Countries API** para la informaci贸n de pa铆ses
-- **Angular Router** para la navegaci贸n SPA  
-- **Lazy Loading** para optimizaci贸n de recursos  
+- **Rest Countries API** para la información de países
+- **Angular Router** para la navegación SPA  
+- **Lazy Loading** para optimización de recursos  
 - **FontAwesome** para iconos  
 - **Netlify** para el despliegue  
 
 ---
 
-## 馃枼锔?Interfaces
+## ??? Interfaces
 
-### B煤squeda por pa铆s
-![B煤squeda por pa铆s](img/porPais.png)  
-Permite buscar un pa铆s espec铆fico escribiendo su nombre completo o parcial.
-
----
-
-### B煤squeda por capital
-![B煤squeda por capital](img/porCapital.png)  
-Permite buscar pa铆ses escribiendo el nombre de su capital.
+### Búsqueda por país
+![Búsqueda por país](img/porPais.png)  
+Permite buscar un país específico escribiendo su nombre completo o parcial.
 
 ---
 
-### B煤squeda por regi贸n
-![B煤squeda por regi贸n](img/porRegion.png)  
-Filtra los resultados por regi贸n geogr谩fica, como Europa, Asia, Am茅rica, etc.
+### Búsqueda por capital
+![Búsqueda por capital](img/porCapital.png)  
+Permite buscar países escribiendo el nombre de su capital.
 
 ---
 
-### Detalle del pa铆s
-![Detalle del pa铆s](img/detalle.png)  
-Muestra informaci贸n detallada de un pa铆s.
+### Búsqueda por región
+![Búsqueda por región](img/porRegion.png)  
+Filtra los resultados por región geográfica, como Europa, Asia, América, etc.
 
 ---
 
-### 馃敆 Enlace a la App Desplegada
-鉃★笍 [Ver la aplicaci贸n en Netlify](https://countries-application-angular.netlify.app/)
+### Detalle del país
+![Detalle del país](img/detalle.png)  
+Muestra información detallada de un país.
 
 ---
 
-### 馃摴 Demo en YouTube
-Mira el funcionamiento de la aplicaci贸n en este video:  
-[![Demo en YouTube] (https://www.youtube.com/watch?v=QSTm5xKzQkk)  
+### ?? Enlace a la App Desplegada
+?? [Ver la aplicación en Netlify](https://countries-application-angular.netlify.app/)
 
 ---
 
-## 馃摝 Instalaci贸n y uso
+### ?? Demo en YouTube
+Mira el funcionamiento de la aplicación en este video:  
+[![Demo en YouTube](img/youtube-thumbnail.png)](https://www.youtube.com/watch?v=QSTm5xKzQkk)
+
+---
+
+## ?? Instalación y uso
 
 1. **Clona este repositorio**:
    ```bash
