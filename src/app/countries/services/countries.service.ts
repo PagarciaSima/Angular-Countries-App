@@ -16,7 +16,33 @@ export class CountryService {
     byRegion:    {region: '', countries: []}
   }
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(
+    private httpClient: HttpClient
+  ) {
+    this.loadFromLocalStorage();
+  }
+
+  private saveToLocalStorage() {
+    localStorage.setItem('cacheStore', JSON.stringify(this.cacheStore));
+  }
+
+  private loadFromLocalStorage() {
+    const data = localStorage.getItem('cacheStore');
+    if (!data) return;
+
+    try {
+      const parsedData = JSON.parse(data);
+      // Valida que tenga la estructura esperada
+      if (parsedData && typeof parsedData === 'object') {
+        this.cacheStore = parsedData;
+      }
+    } catch (error) {
+      console.error('Error al parsear localStorage data:', error);
+      // limpia datos corruptos
+      localStorage.removeItem('cacheStore');
+    }
+  }
+
 
   private getCountriesRequest(url: string): Observable<Country[]> {
     return this.httpClient.get<Country[]>(url)
@@ -38,7 +64,8 @@ export class CountryService {
     const url = `${this.apiUrl}/capital/${term}`;
     return this.getCountriesRequest(url)
       .pipe(
-        tap( countries => this.cacheStore.byCapital = { term, countries })
+        tap( countries => this.cacheStore.byCapital = { term, countries }),
+        tap( () => this.saveToLocalStorage()),
       );
   }
 
@@ -46,7 +73,8 @@ export class CountryService {
     const url = `${this.apiUrl}/name/${term}`;
     return this.getCountriesRequest(url)
       .pipe(
-        tap( countries => this.cacheStore.byCountries = { term, countries })
+        tap( countries => this.cacheStore.byCountries = { term, countries }),
+        tap( () => this.saveToLocalStorage()),
       );
   }
 
@@ -54,7 +82,8 @@ export class CountryService {
     const url = `${this.apiUrl}/region/${region}`;
     return this.getCountriesRequest(url)
       .pipe(
-        tap( countries => this.cacheStore.byRegion = { region, countries })
+        tap( countries => this.cacheStore.byRegion = { region, countries }),
+        tap( () => this.saveToLocalStorage()),
       );
   }
 }
