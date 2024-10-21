@@ -1,27 +1,63 @@
-# AngularCountryApp
+# 🌎 Aplicación de Búsqueda de Países en Angular 15.2.0
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.11.
+## 🌟 Características
 
-## Development server
+Esta es una aplicación desarrollada en Angular que permite buscar información detallada de países a través de la API pública de [Rest Countries](https://restcountries.com/).  
+Los usuarios pueden **buscar por nombre**, **buscar por capital**, **filtrar por región**, y **navegar hacia páginas individuales** con información detallada de cada país.  
+Además, se ha implementado **paginación** para mejorar la navegación y **FontAwesome** para iconos interactivos.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+### 🚀 Tecnologías utilizadas
+- **Angular 15.2.0**
+- **Rest Countries API** para la información de países
+- **Angular Router** para la navegación SPA  
+- **Lazy Loading** para optimización de recursos  
+- **FontAwesome** para iconos  
+- **Netlify** para el despliegue  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## 🖥️ Interfaces
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Búsqueda por país
+![Búsqueda por país](img/porPais.png)  
+Permite buscar un país específico escribiendo su nombre completo o parcial.
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Búsqueda por capital
+![Búsqueda por capital](img/porCapital.png)  
+Permite buscar países escribiendo el nombre de su capital.
 
-## Running end-to-end tests
+---
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Búsqueda por región
+![Búsqueda por región](img/porRegion.png)  
+Filtra los resultados por región geográfica, como Europa, Asia, América, etc.
 
-## Further help
+---
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Detalle del país
+![Detalle del país](img/detalle.png)  
+Muestra información detallada de un país específico, incluyendo capital, población, idioma, moneda, y más.
+
+---
+
+### 🔗 Enlace a la App Desplegada
+➡️ [Ver la aplicación en Netlify](https://countries-application-angular.netlify.app/)
+
+---
+
+### 📹 Demo en YouTube
+Mira el funcionamiento de la aplicación en este video:  
+[![Demo en YouTube](img/youtube-thumbnail.png)](https://www.youtube.com/watch?v=QSTm5xKzQkk)  
+
+---
+
+## 📦 Instalación y uso
+
+1. **Clona este repositorio**:
+   ```bash
+   git clone https://github.com/PagarciaSima/Angular-Countries-App
+   cd Angular-Countries-App
