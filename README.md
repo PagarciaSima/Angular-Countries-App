@@ -18,7 +18,7 @@ Además, se ha implementado **paginación** para mejorar la navegación y **Font
 
 ---
 
-## 🖥️ Interfaces
+## 🖥�?Interfaces
 
 ### Búsqueda por país
 ![Búsqueda por país](img/porPais.png)  
@@ -40,7 +40,7 @@ Filtra los resultados por región geográfica, como Europa, Asia, América, etc.
 
 ### Detalle del país
 ![Detalle del país](img/detalle.png)  
-Muestra información detallada de un país específico, incluyendo capital, población, idioma, moneda, y más.
+Muestra información detallada de un país.
 
 ---
 
@@ -51,7 +51,7 @@ Muestra información detallada de un país específico, incluyendo capital, pobl
 
 ### 📹 Demo en YouTube
 Mira el funcionamiento de la aplicación en este video:  
-[![Demo en YouTube](img/youtube-thumbnail.png)](https://www.youtube.com/watch?v=QSTm5xKzQkk)  
+[![Demo en YouTube] (https://www.youtube.com/watch?v=QSTm5xKzQkk)  
 
 ---
 
