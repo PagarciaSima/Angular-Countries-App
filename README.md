@@ -1,61 +1,61 @@
-# ?? Aplicaci¨®n de B¨²squeda de Pa¨ªses en Angular 15.2.0
+# ğŸŒ AplicaciÃ³n de BÃºsqueda de PaÃ­ses en Angular 15.2.0
 
-## ?? Caracter¨ªsticas
+## ğŸŒŸ CaracterÃ­sticas
 
-Esta es una aplicaci¨®n desarrollada en Angular que permite buscar informaci¨®n detallada de pa¨ªses a trav¨¦s de la API p¨²blica de [Rest Countries](https://restcountries.com/).  
-Los usuarios pueden **buscar por nombre**, **buscar por capital**, **filtrar por regi¨®n**, y **navegar hacia p¨¢ginas individuales** con informaci¨®n detallada de cada pa¨ªs.  
-Adem¨¢s, se ha implementado **paginaci¨®n** para mejorar la navegaci¨®n y **FontAwesome** para iconos interactivos.
+Esta es una aplicaciÃ³n desarrollada en Angular que permite buscar informaciÃ³n detallada de paÃ­ses a travÃ©s de la API pÃºblica de [Rest Countries](https://restcountries.com/).  
+Los usuarios pueden **buscar por nombre**, **buscar por capital**, **filtrar por regiÃ³n**, y **navegar hacia pÃ¡ginas individuales** con informaciÃ³n detallada de cada paÃ­s.  
+AdemÃ¡s, se ha implementado **paginaciÃ³n** para mejorar la navegaciÃ³n y **FontAwesome** para iconos interactivos.
 
 ---
 
-### ?? Tecnolog¨ªas utilizadas
+### ğŸš€ TecnologÃ­as utilizadas
 - **Angular 15.2.0**
-- **Rest Countries API** para la informaci¨®n de pa¨ªses
-- **Angular Router** para la navegaci¨®n SPA  
-- **Lazy Loading** para optimizaci¨®n de recursos  
+- **Rest Countries API** para la informaciÃ³n de paÃ­ses
+- **Angular Router** para la navegaciÃ³n SPA  
+- **Lazy Loading** para optimizaciÃ³n de recursos  
 - **FontAwesome** para iconos  
 - **Netlify** para el despliegue  
 
 ---
 
-## ??? Interfaces
+## ğŸ–¥ï¸ Interfaces
 
-### B¨²squeda por pa¨ªs
-![B¨²squeda por pa¨ªs](img/porPais.png)  
-Permite buscar un pa¨ªs espec¨ªfico escribiendo su nombre completo o parcial.
-
----
-
-### B¨²squeda por capital
-![B¨²squeda por capital](img/porCapital.png)  
-Permite buscar pa¨ªses escribiendo el nombre de su capital.
+### BÃºsqueda por paÃ­s
+![BÃºsqueda por paÃ­s](img/porPais.png)  
+Permite buscar un paÃ­s especÃ­fico escribiendo su nombre completo o parcial.
 
 ---
 
-### B¨²squeda por regi¨®n
-![B¨²squeda por regi¨®n](img/porRegion.png)  
-Filtra los resultados por regi¨®n geogr¨¢fica, como Europa, Asia, Am¨¦rica, etc.
+### BÃºsqueda por capital
+![BÃºsqueda por capital](img/porCapital.png)  
+Permite buscar paÃ­ses escribiendo el nombre de su capital.
 
 ---
 
-### Detalle del pa¨ªs
-![Detalle del pa¨ªs](img/detalle.png)  
-Muestra informaci¨®n detallada de un pa¨ªs.
+### BÃºsqueda por regiÃ³n
+![BÃºsqueda por regiÃ³n](img/porRegion.png)  
+Filtra los resultados por regiÃ³n geogrÃ¡fica, como Europa, Asia, AmÃ©rica, etc.
 
 ---
 
-### ?? Enlace a la App Desplegada
-?? [Ver la aplicaci¨®n en Netlify](https://countries-application-angular.netlify.app/)
+### Detalle del paÃ­s
+![Detalle del paÃ­s](img/detalle.png)  
+Muestra informaciÃ³n detallada de un paÃ­s.
 
 ---
 
-### ?? Demo en YouTube
-Mira el funcionamiento de la aplicaci¨®n en este video:  
+### ğŸ”— Enlace a la App Desplegada
+â¡ï¸ [Ver la aplicaciÃ³n en Netlify](https://countries-application-angular.netlify.app/)
+
+---
+
+### ğŸ“¹ Demo en YouTube
+Mira el funcionamiento de la aplicaciÃ³n en este video:  
 [![Demo en YouTube](img/youtube-thumbnail.png)](https://www.youtube.com/watch?v=QSTm5xKzQkk)
 
 ---
 
-## ?? Instalaci¨®n y uso
+## ğŸ“¦ InstalaciÃ³n y uso
 
 1. **Clona este repositorio**:
    ```bash
