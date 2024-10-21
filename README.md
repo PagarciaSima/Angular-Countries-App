@@ -51,7 +51,7 @@ Muestra información detallada de un país.
 
 ### 📹 Demo en YouTube
 Mira el funcionamiento de la aplicación en este video:  
-[![Demo en YouTube](img/youtube-thumbnail.png)](https://www.youtube.com/watch?v=QSTm5xKzQkk)
+[Demo en YouTube](https://www.youtube.com/watch?v=QSTm5xKzQkk)
 
 ---
 
